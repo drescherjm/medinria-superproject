@@ -51,9 +51,11 @@ EP_SetDirectories(${ep}
 ## Define repository where get the sources
 ## #############################################################################
 
+set(tag "last-vtk5")
+
 set(url ${GITHUB_PREFIX}Inria-Asclepios/TTK-Public.git)
 if (NOT DEFINED ${ep}_SOURCE_DIR)
-  set(location GIT_REPOSITORY ${url})
+  set(location GIT_REPOSITORY ${url} GIT_TAG ${tag})
 endif()
 
 
