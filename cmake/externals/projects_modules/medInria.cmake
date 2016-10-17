@@ -61,9 +61,11 @@ EP_SetDirectories(${ep}
 ## Define repository where get the sources
 ## #############################################################################
 
+set(tag "release-qt4")
+
 set(url ${GITHUB_PREFIX}medInria/medInria-public.git)
 if (NOT DEFINED ${ep}_SOURCE_DIR)
-  set(location GIT_REPOSITORY ${url})
+  set(location GIT_REPOSITORY ${url} GIT_TAG ${tag})
 endif()
 
 
